@@ -118,6 +118,25 @@ export const projects: Project[] = [
         featured: false,
         heroImage: "/images/projects/impeller-geometry-validation/hero.jpg",
         heroImageClass: "hero-impeller-geometry",
+
+        references: [
+    {
+        text: "Flowserve",
+        url: "https://www.flowserve.com/"
+    },
+    {
+        text: "FaroArm Quantum Series",
+        url: "https://www.faro.com/en/Products/Hardware/Quantum-FaroArms"
+    },
+    {
+        text: "FaroArm Quantum S Product video",
+        url: "https://www.youtube.com/watch?v=3M3_qixbWvQ"
+    },
+    {
+        text: "Geomagic Software",
+        url: "https://hexagon.com/company/divisions/manufacturing-intelligence/geomagic"
+    },
+        ],
     }, 
 
     {

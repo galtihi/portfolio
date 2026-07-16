@@ -190,6 +190,34 @@ if (!project) {
 
 </section>
 
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+)}
+
 </div>
 
 </Layout>
