@@ -1,0 +1,275 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/projects";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+
+const project = projects.find(
+    p => p.slug === "ultrasonic-welding"
+);
+
+if (!project) {
+    throw new Error("Project not found");
+}
+---
+
+<Layout>
+
+<div class="project-page">
+
+    <a class="back-link" href="/projects">
+        ← Back to Projects
+    </a>
+
+<section class="project-header">
+
+    <div class="project-summary">
+
+        <img
+            src={project.companyLogo}
+            alt={`${project.company} logo`}
+            class={`project-company-logo ${project.companyLogoClass}`}
+        />
+
+        <h1>{project.title}</h1>
+
+
+    </div>
+
+    <div class={`project-hero-image ${project.heroImageClass}`}>
+
+        <img
+            src={project.heroImage}
+            alt={project.title}
+            class="project-hero"
+        />
+
+    </div>
+
+</section>
+
+<hr class="experience-divider" />
+
+<section>
+
+    <h3 class="company-section-title">
+        Overview
+    </h3>
+
+    <p>
+        During my time at Dekobo, one of my responsibilities was identifying opportunities to
+        improve existing products and manufacturing processes. One of the most significant
+        bottlenecks was the sealing of the pool cover slats, where every end cap had to be
+        manually bonded with silicone and left to cure for up to 20 days before final assembly.
+        This process significantly increased lead times and limited production efficiency.
+    </p>
+
+    <p>
+       Although ultrasonic welding had been investigated several years earlier, the concept
+       was never implemented. After joining Dekobo, I was asked by the company owner to
+       re-evaluate the technology, determine whether it could provide a viable alternative to
+       the existing silicone sealing process, and lead the development if successful.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Project Development
+    </h3>
+
+    <p>
+        I began by benchmarking leading competitors in the automatic pool cover industry,
+        many of whom had already adopted ultrasonic welding. This research confirmed that
+        the technology had the potential to significantly reduce production lead time while
+        improving process consistency. After presenting my findings, the project was approved
+        and I began evaluating equipment suppliers. Following discussions with several
+        manufacturers, Sonic Italia was selected to provide the ultrasonic welding solution.
+    </p>
+
+    <h4>Product Redesign</h4>
+
+    <p>
+        The project ultimately required a complete redesign of the end caps rather than simply
+        modifying the existing design. In addition to incorporating features required for
+        ultrasonic welding, such as energy directors, I used the opportunity to improve the
+        product itself. The new end caps were developed as a modular system with
+        interchangeable outer components, creating a platform that could support future
+        variants with different lengths or additional functionality while maintaining the same
+        core design. Particular attention was also given to improving part alignment during
+        assembly while preserving the product's existing appearance.
+    </p>
+
+    <h4>Prototype Development</h4>
+
+    <p>
+        To minimise tooling investment during development, we partnered with Protolabs to
+        manufacture prototype components using aluminium injection moulding tools. This
+        allowed multiple design iterations to be produced quickly and economically before
+        committing to production tooling. Throughout development, I worked closely with both
+        Protolabs and Sonic Italia to ensure the design satisfied the requirements of both
+        injection moulding and ultrasonic welding. Between design iterations, I continuously
+        evaluated concepts using 3D-printed parts before progressing to injection-moulded
+        prototypes.
+    </p>
+
+    <p>
+        Once the design was finalised, Sonic Italia developed a custom ultrasonic sonotrode
+        specifically for the new end cap geometry, while their partner, Fabotex, integrated the
+        welding system into a dedicated production machine. After the first prototype
+        components were manufactured, I travelled to Italy to participate in the initial testing
+        and validation of the process.
+    </p>
+
+    <h4>Validation & Process Optimization</h4>
+
+    <p>
+        During the initial trials, we discovered that inconsistent alignment between the end cap
+        and the polycarbonate slat resulted in water leakage. After returning to Dekobo, I
+        redesigned the connecting geometry to ensure repeatable positioning during welding
+        and commissioned a second round of prototype components.
+    </p>
+
+    <p>
+        Following the arrival of the welding machine at Dekobo, I continued validating the
+        process in-house. Although the redesigned components significantly improved the
+        results, occasional leakage still occurred. After systematically evaluating the welding
+        parameters, I concluded that the root cause was not the welding process itself but
+        dimensional variation in the extruded polycarbonate slats. With wall thicknesses of
+        approximately 1 mm, small deformation introduced during extrusion and cutting
+        occasionally prevented a perfect weld.
+    </p>
+
+    <p>
+        Rather than continuing to optimise a process that had reached its practical limits, I
+        developed a hybrid sealing solution by applying a small amount of UV-curing adhesive
+        around the welded joint. This compensated for the dimensional variation while
+        preserving the speed advantages of ultrasonic welding. The resulting assemblies
+        consistently passed leak testing, and several samples were installed in a swimming pool
+        for real-world validation, where they performed successfully.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Outcome
+    </h3>
+
+    <p>
+        The project demonstrated that ultrasonic welding could significantly reduce
+        manufacturing lead time while improving process consistency and eliminating the
+        long silicone curing process. Unlike the previous manufacturing method, the welded
+        slats could be assembled into the final product immediately after welding, removing
+        the need for weeks of curing before production could continue.
+    </p>
+
+    <p>
+        Although a small amount of UV-curing adhesive was ultimately required to
+        compensate for extrusion tolerances, the new manufacturing process consistently
+        produced watertight assemblies that successfully passed both laboratory leak
+        testing and real-world validation.
+    </p>
+
+    <p>
+        In addition to improving throughput, the dedicated ultrasonic welding machine
+        significantly improved operator ergonomics by replacing the manual silicone
+        bonding process with a faster, cleaner, and more repeatable operation.
+    </p>
+
+    <p>
+        Before leaving the company, I completed the development and validation phase of
+        the project, including prototype testing, machine commissioning, and production
+        validation.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Gallery
+    </h3>
+
+    <ProjectGallery
+        images={[
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-1.jpg",
+                alt: "Final CAD assembly",
+                caption: "Slat cross section"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-2.jpg",
+                alt: "Prototype assembly",
+                caption: "CAD model of old design"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-3.jpg",
+                alt: "Internal pneumatic passages",
+                caption: "CAD model of new design"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-4.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "In-house 3D printed sample"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-5.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "Injection molded sample"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-6.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "Welded solution (above), Silicone solution (below)"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/gallery-7.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "The machine during testing"
+            },
+            {
+                src: "/images/projects/ultrasonic-welding/video-thumb.jpg",
+                video: "/images/videos/ultrasonic-welding/welding.MP4",
+                alt: "Ultrasonic welding process",
+                caption: "Ultrasonic welding process"
+            },
+        ]}
+    />
+
+</section>
+
+
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+)}
+
+
+</div>
+
+</Layout>

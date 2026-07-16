@@ -1,0 +1,159 @@
+---
+const { home = false } = Astro.props;
+---
+
+<nav class="navbar">
+
+    <div class="navbar-top">
+
+        <a
+            href="/"
+            class={`logo ${home ? "logo-hidden" : ""}`}
+        >
+            Tihamér Gál
+        </a>
+
+        <button
+            id="menu-toggle"
+            class="menu-toggle"
+            aria-label="Open navigation"
+        >
+
+            <svg
+                class="icon icon-menu"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <line x1="3" y1="12" x2="21" y2="12"/>
+                <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+
+            <svg
+                class="icon icon-close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+
+        </button>
+
+    </div>
+
+    <div id="nav-links" class="nav-links">
+
+        <div class="nav-main">
+
+            <a href="/experience">Experience</a>
+            <a href="/projects">Projects</a>
+            <a href="/about">About</a>
+
+        </div>
+
+        <div class="nav-secondary">
+
+            <a
+                href="https://www.linkedin.com/in/tihamer-gal"
+                target="_blank"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="/documents/Tihamer_Gal_CV.pdf"
+                target="_blank"
+            >
+                CV
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<script>
+
+const menuButton = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+const menuIcon = document.querySelector(".icon-menu");
+const closeIcon = document.querySelector(".icon-close");
+
+function openMenu() {
+
+    navLinks.classList.add("open");
+
+    document.body.classList.add("menu-open");
+
+    menuIcon.classList.add("hidden");
+    closeIcon.classList.add("visible");
+
+}
+
+function closeMenu() {
+
+    navLinks.classList.remove("open");
+
+    document.body.classList.remove("menu-open");
+
+    menuIcon.classList.remove("hidden");
+    closeIcon.classList.remove("visible");
+
+}
+
+menuButton?.addEventListener("click", (event) => {
+
+    event.stopPropagation();
+
+    if (navLinks.classList.contains("open")) {
+
+        closeMenu();
+
+    } else {
+
+        openMenu();
+
+    }
+
+});
+
+document.querySelectorAll("#nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        closeMenu();
+
+    });
+
+});
+
+document.addEventListener("click", (event) => {
+
+    if (
+        navLinks.classList.contains("open") &&
+        !navLinks.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+
+        event.preventDefault();
+        event.stopPropagation();
+
+        closeMenu();
+
+    }
+
+}, true);
+</script>

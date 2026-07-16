@@ -1,0 +1,168 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/projects";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+
+const project = projects.find(
+    p => p.slug === "exhibition-pool"
+);
+
+if (!project) {
+    throw new Error("Project not found");
+}
+---
+
+<Layout>
+
+<div class="project-page">
+
+    <a class="back-link" href="/projects">
+        ← Back to Projects
+    </a>
+
+<section class="project-header">
+
+    <div class="project-summary">
+
+        <img
+            src={project.companyLogo}
+            alt={`${project.company} logo`}
+            class={`project-company-logo ${project.companyLogoClass}`}
+        />
+
+        <h1>{project.title}</h1>
+
+
+    </div>
+
+    <div class={`project-hero-image ${project.heroImageClass}`}>
+
+        <img
+            src={project.heroImage}
+            alt={project.title}
+            class="project-hero"
+        />
+
+    </div>
+
+</section>
+
+<hr class="experience-divider" />
+
+<section>
+
+    Coming soon
+
+    <!--
+
+    <h3 class="company-section-title">
+        Project Overview
+    </h3>
+
+    <p>
+        Was the target exactly 20%?
+        What was the actuator family called?
+        Which competitor was benchmarked?
+        What tests were performed?
+        Was the prototype cast or machined?
+        Was the project officially cancelled or paused?
+        How many new sizes were proposed?
+        Did the redesign include patentable ideas? 
+    </p>
+
+    <p>
+        Placeholder.
+    </p>
+
+    -->
+
+</section>
+
+<section>
+
+    <!--
+
+    <h3 class="company-section-title">
+        Engineering Process
+    </h3>
+
+    <p>
+        Placeholder.
+    </p>
+
+    <p>
+        Placeholder.
+    </p>
+
+    <p>
+        Placeholder.
+    </p>
+
+    <p>
+        Placeholder.
+    </p>
+
+    -->
+
+</section>
+
+<section>
+
+    <!--
+
+    <h3 class="company-section-title">
+        Outcome
+    </h3>
+
+    <p>
+        Placeholder.
+    </p>
+
+    <p>
+        Placeholder.
+    </p>
+
+    -->
+
+</section>
+
+<section>
+
+    <!--
+
+    <h3 class="company-section-title">
+        Gallery
+    </h3>
+
+    <ProjectGallery
+        images={[
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-1.jpg",
+                alt: "Final CAD assembly",
+                caption: "Final CAD assembly"
+            },
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-2.jpg",
+                alt: "Prototype assembly",
+                caption: "Final CAD assembly"
+            },
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-3.jpg",
+                alt: "Internal pneumatic passages",
+                caption: "Final CAD assembly"
+            },
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-4.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "Final CAD assembly"
+            }
+        ]}
+    />
+
+    -->
+
+</section>
+
+</div>
+
+</Layout>

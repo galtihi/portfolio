@@ -1,0 +1,231 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/projects";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+
+const project = projects.find(
+    p => p.slug === "integrated-pneumatic-module"
+);
+
+if (!project) {
+    throw new Error("Project not found");
+}
+---
+
+<Layout>
+
+<div class="project-page">
+
+    <a class="back-link" href="/projects">
+        ← Back to Projects
+    </a>
+
+<section class="project-header">
+
+    <div class="project-summary">
+
+        <img
+            src={project.companyLogo}
+            alt={`${project.company} logo`}
+            class={`project-company-logo ${project.companyLogoClass}`}
+        />
+
+        <h1>{project.title}</h1>
+
+
+    </div>
+
+    <div class={`project-hero-image ${project.heroImageClass}`}>
+
+        <img
+            src={project.heroImage}
+            alt={project.title}
+            class="project-hero"
+        />
+
+    </div>
+
+</section>
+
+<hr class="experience-divider" />
+
+<section>
+
+    <h3 class="company-section-title">
+        Overview
+    </h3>
+
+    <p>
+        The Integrated Pneumatic Module (IPM) was developed to provide 
+        a standardized pneumatic interface for Flowserve's rack-and-pinion 
+        pneumatic actuators in accordance with the VDI/VDE 3847-2 standard. 
+        By integrating the pneumatic air distribution within the module, 
+        the design eliminates external tubing and enables plug-and-play replacement 
+        of pneumatic accessories, significantly simplifying maintenance and reducing downtime.
+    </p>
+
+    <p>
+        The project was initiated to meet a new requirement from BASF, one of Flowserve's key 
+        customers, where delivering a compliant solution within a demanding 
+        timeframe was critical. As Flowserve had never developed an IPM 
+        before, the project required the creation of an entirely new 
+        product platform while complying with a newly adopted industry 
+        standard.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Project Development
+    </h3>
+
+    <article>
+
+        <p>
+            The project was led by Flowserve's engineering team in the 
+            United Kingdom, who were responsible for the overall product 
+            development. Due to limited engineering capacity, I was asked 
+            to support the project by taking ownership of the mechanical 
+            design of the IPM.
+        </p>
+
+        <h4>Understanding the Requirements</h4>
+
+        <p>
+            My first responsibility was to study and interpret the 
+            requirements of the VDI/VDE 3847-2 standard before 
+            benchmarking existing solutions available on the market. 
+            This provided a clear understanding of the functional 
+            requirements and helped identify different design approaches 
+            already adopted within the industry. Based on this research, 
+            I developed Flowserve's first IPM concept from scratch.
+        </p>
+
+    </article>
+
+    <article>
+
+        <h4>Concept Development</h4>
+
+        <p>
+            One of the biggest engineering challenges was designing a 
+            solution that could accommodate the company's entire range 
+            of pneumatic actuators while working within very limited 
+            packaging constraints. During the concept phase, it became 
+            clear that a single module could not efficiently cover every 
+            actuator size. Together with the engineering team in the 
+            United Kingdom, we decided to develop two module variants, 
+            allowing the design to remain compact while covering the 
+            complete product range.
+        </p>
+
+    </article>
+
+    <article>
+
+        <h4>Detailed Design & Prototype Validation</h4>
+
+        <p>
+            I was responsible for creating the complete CAD assembly, 
+            including the internal pneumatic air passages, sealing 
+            interfaces, and mounting features required for the modular 
+            accessory system. After completing the design, I produced the 
+            manufacturing drawings used for prototype production. The 
+            prototype components were machined from aluminium at one of 
+            Flowserve's manufacturing sites in China before being 
+            assembled and tested as part of the validation process.
+        </p>
+
+    </article>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Outcome
+    </h3>
+
+    <p>
+        The project resulted in Flowserve's first Integrated Pneumatic Module compliant
+        with the VDI/VDE 3847-2 standard, providing a standardized and service-friendly
+        pneumatic interface for the company's rack & pinion actuator platform. The
+        successful prototype demonstrated the technical feasibility of the design while
+        fulfilling an important customer requirement. To the best of my knowledge, the
+        product was not commercially released following completion of the development.
+    </p>
+
+    <p>
+        In recognition of my contribution to the project, I received an 
+        internal Project Award, acknowledging my role in delivering the 
+        project within a challenging timeframe.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Gallery
+    </h3>
+
+    <ProjectGallery
+        images={[
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-1.jpg",
+                alt: "Final CAD assembly",
+                caption: "CAD assembly"
+            },
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-2.jpg",
+                alt: "Prototype assembly",
+                caption: "Section of assembly drawing"
+            },
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-3.jpg",
+                alt: "Internal pneumatic passages",
+                caption: "Prototype"
+            },
+            {
+                src: "/images/projects/integrated-pneumatic-module/gallery-4.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "Award"
+            }
+        ]}
+    />
+
+</section>
+
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+)}
+
+</div>
+
+</Layout>

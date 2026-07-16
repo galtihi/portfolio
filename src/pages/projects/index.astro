@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import { projects } from "../../data/projects";
+---
+
+<Layout>
+
+<div class="page-container">
+
+    <a class="back-link" href="/">
+        ← Back to Home
+    </a>
+
+    <h1>Projects</h1>
+
+    <hr class="experience-divider" />
+
+    <div class="project-grid">
+
+        {
+            projects.map(project => (
+
+                <ProjectCard
+                    image={project.heroImage}
+                    title={project.title}
+                    link={`/projects/${project.slug}`}
+                />
+
+            ))
+        }
+
+    </div>
+
+</div>
+
+</Layout>

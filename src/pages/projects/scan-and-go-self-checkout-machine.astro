@@ -1,0 +1,217 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { projects } from "../../data/projects";
+import ProjectGallery from "../../components/ProjectGallery.astro";
+
+const project = projects.find(
+    p => p.slug === "scan-and-go-self-checkout-machine"
+);
+
+if (!project) {
+    throw new Error("Project not found");
+}
+---
+
+<Layout>
+
+<div class="project-page">
+
+    <a class="back-link" href="/projects">
+        ← Back to Projects
+    </a>
+
+<section class="project-header">
+
+    <div class="project-summary">
+
+        <img
+            src={project.companyLogo}
+            alt={`${project.company} logo`}
+            class={`project-company-logo ${project.companyLogoClass}`}
+        />
+
+        <h1>{project.title}</h1>
+
+
+    </div>
+
+    <div class={`project-hero-image ${project.heroImageClass}`}>
+
+        <img
+            src={project.heroImage}
+            alt={project.title}
+            class="project-hero"
+        />
+
+    </div>
+
+</section>
+
+<hr class="experience-divider" />
+
+<section>
+
+    <h3 class="company-section-title">
+        Overview
+    </h3>
+
+    <p>
+        The Scan & Go self-checkout machine was developed for a German customer as a
+        complete retail self-checkout solution. The project involved adapting the customer's
+        design for manufacturing while preparing the product for serial production at Matic.
+        The system combined sheet metal components with purchased mechanical, plastic, and
+        electronic parts that ultimately formed a fully assembled product.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Project Development
+    </h3>
+
+    <article>
+
+        <p>
+            My responsibility was to adapt the customer's CAD models into manufacturable sheet
+            metal components, create production drawings, and prepare the technical
+            documentation required for manufacturing. Throughout the project, I worked closely
+            with production to ensure the design could be manufactured consistently while
+            maintaining the customer's functional requirements.
+        </p>
+
+        <p>
+            The project required frequent technical collaboration with the customer's lead design
+            engineer, who regularly visited our facility during development. These meetings allowed
+            us to review progress, discuss design changes, and resolve manufacturing challenges
+            directly throughout the project.
+        </p>
+
+        <h4>Prototype Validation</h4>
+
+        <p>
+            Several prototype units were assembled jointly with the customer's design engineer
+            using both the sheet metal components manufactured by Matic and purchased parts
+            supplied by the customer, including plastic components and other assemblies.
+        </p>
+
+        <p>
+            Participating in the prototype builds provided valuable insight into the assembly
+            process, helping identify design improvements before production. Following the
+            prototype phase, I documented the assembly sequence and prepared assembly
+            instructions to support manufacturing.
+        </p>
+
+    </article>
+
+    <article>
+
+        <h4>Manufacturing Implementation</h4>
+
+        <p>
+            As the design matured, the collaboration expanded beyond manufacturing individual
+            sheet metal components. Following successful prototype validation, the customer and
+            Matic agreed that the complete Scan & Go units — including mechanical, electrical, and
+            purchased components — would be assembled at our facility before being shipped
+            directly to the end customer.
+        </p>
+
+        <p>
+            This transition required the creation of assembly documentation and manufacturing
+            support to enable efficient serial production.
+        </p>
+
+    </article>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Outcome
+    </h3>
+
+    <p>
+        The project successfully progressed from customer design through prototype validation
+        into serial production, with manufacturing documentation and assembly procedures
+        established for complete product assembly. Beyond the engineering work itself, the
+        project gave me valuable early-career experience collaborating directly with an
+        international customer and supporting a product from manufacturing preparation to
+        production launch.
+    </p>
+
+</section>
+
+<section>
+
+    <h3 class="company-section-title">
+        Gallery
+    </h3>
+
+    <ProjectGallery
+        images={[
+            {
+                src: "/images/projects/scan-and-go-self-checkout-machine/gallery-1.jpg",
+                alt: "Final CAD assembly",
+                caption: "Final Product"
+            },
+            {
+                src: "/images/projects/scan-and-go-self-checkout-machine/gallery-2.jpg",
+                alt: "Prototype assembly",
+                caption: "Supersmart S3 line"
+            },
+            {
+                src: "/images/projects/scan-and-go-self-checkout-machine/gallery-3.jpg",
+                alt: "Internal pneumatic passages",
+                caption: "Prototype assembly"
+            },
+            {
+                src: "/images/projects/scan-and-go-self-checkout-machine/gallery-4.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "Prototype assembly"
+            },
+            {
+                src: "/images/projects/scan-and-go-self-checkout-machine/gallery-5.jpg",
+                alt: "Completed Integrated Pneumatic Module",
+                caption: "Product ready for packaging"
+            }
+        ]}
+    />
+
+</section>
+
+
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
+
+</section>
+
+)}
+
+
+
+</div>
+
+</Layout>
