@@ -51,84 +51,103 @@ if (!project) {
 
 <section>
 
-    Coming soon
-
-    <!--
-
     <h3 class="company-section-title">
-        Project Overview
+        Overview
     </h3>
 
     <p>
-        Was the target exactly 20%?
-        What was the actuator family called?
-        Which competitor was benchmarked?
-        What tests were performed?
-        Was the prototype cast or machined?
-        Was the project officially cancelled or paused?
-        How many new sizes were proposed?
-        Did the redesign include patentable ideas? 
+        As part of a strategic business decision, an end-suction water pump was introduced to
+        a new market with significantly stricter hydraulic performance requirements. Although
+        the pump had previously performed successfully in other markets, initial testing
+        revealed that it failed to meet the new acceptance criteria despite no intentional design
+        changes.
     </p>
 
     <p>
-        Placeholder.
+        To investigate the issue, I was tasked with verifying whether the manufactured hydraulic
+        components accurately matched their nominal CAD geometry. Using high-precision 3D
+        scanning and deviation analysis, I compared production parts against their original 3D
+        models to identify manufacturing variations that could explain the unexpected
+        hydraulic performance.
     </p>
-
-    -->
 
 </section>
 
 <section>
 
-    <!--
-
     <h3 class="company-section-title">
-        Engineering Process
+        Project Development
     </h3>
 
     <p>
-        Placeholder.
+        The investigation began with the inspection of several production impellers supplied
+        by Flowserve's manufacturing facility in Coslada, Spain. The components were
+        shipped to Budapest, where I performed high-precision 3D scanning using a FARO
+        Quantum S FaroArm equipped with a Laser Line Probe.
     </p>
 
     <p>
-        Placeholder.
+        After processing the scan data, I aligned the resulting meshes with the nominal CAD
+        models and performed a detailed deviation analysis. This enabled a direct comparison
+        between the manufactured geometry and the intended design.
+    </p>
+
+        <h4>Comparative Analysis</h4>
+
+    <p>
+        The inspection revealed consistent geometric deviations across multiple impellers.
+        Areas of excess material were identified near the vane inlets, while material loss was
+        observed along the back side of the vanes. The repeatability of these deviations
+        indicated that they were systematic manufacturing variations rather than isolated
+        defects.
     </p>
 
     <p>
-        Placeholder.
+        The results suggested that the casting process introduced geometric distortion during
+        the cooling phase, causing the manufactured impellers to differ from their intended
+        hydraulic geometry.
+    </p>
+
+        <h4>On-Site Casing Inspection</h4>
+
+    <p>
+        Based on the impeller inspection results, the investigation was expanded to include the
+        pump casings. Due to their size and weight, transporting the castings to Budapest was
+        impractical.
     </p>
 
     <p>
-        Placeholder.
+        Instead, I travelled to Flowserve's manufacturing facility in Coslada, Spain, where the
+        equipment had been shipped in advance to perform the measurements on site. The additional
+        inspections complemented the impeller analysis and provided a more complete
+        understanding of the geometric condition of the hydraulic components involved in the
+        investigation.
     </p>
-
-    -->
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Outcome
     </h3>
 
     <p>
-        Placeholder.
+        The combined inspection results demonstrated that the manufactured components
+        deviated significantly from their nominal CAD geometry. The identified variations
+        provided a clear explanation for the unexpected hydraulic performance and helped
+        establish the manufacturing process as the most likely root cause of the issue.
     </p>
 
     <p>
-        Placeholder.
+        The findings supported the engineering team in directing further corrective actions and
+        contributed to improving the product's compliance with the hydraulic performance
+        requirements of the new market.
     </p>
-
-    -->
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Gallery
@@ -137,29 +156,37 @@ if (!project) {
     <ProjectGallery
         images={[
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-1.jpg",
-                alt: "Final CAD assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/impeller-geometry-validation/gallery-1.jpg",
+                alt: "Cast impeller",
+                caption: "Physical Part"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-2.jpg",
-                alt: "Prototype assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/impeller-geometry-validation/gallery-2.jpg",
+                alt: "3D scanned impeller mesh",
+                caption: "Scanned mesh"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-3.jpg",
-                alt: "Internal pneumatic passages",
-                caption: "Final CAD assembly"
+                src: "/images/projects/impeller-geometry-validation/gallery-3.jpg",
+                alt: "Nominal CAD model of the impeller",
+                caption: "CAD model"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-4.jpg",
-                alt: "Completed Integrated Pneumatic Module",
-                caption: "Final CAD assembly"
+                src: "/images/projects/impeller-geometry-validation/gallery-4.jpg",
+                alt: "Deviation analysis between scanned part and CAD model",
+                caption: "Deviation map"
+            },
+            {
+                src: "/images/projects/impeller-geometry-validation/gallery-5.jpg",
+                alt: "FaroArm on metal table",
+                caption: "My 3D scanning station in Budapest"
+            },
+            {
+                src: "/images/projects/impeller-geometry-validation/gallery-6.jpg",
+                alt: "FaroArm in manufacturing environment",
+                caption: "My 3D scanning station in Madrid"
             }
         ]}
     />
-
-    -->
 
 </section>
 
