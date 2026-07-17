@@ -203,6 +203,25 @@ export const projects: Project[] = [
         featured: false,
         heroImage: "/images/projects/exhibition-pool/hero.jpg",
         heroImageClass: "hero-exhibition-pool",
+
+        references: [
+    {
+        text: "Dekobo",
+        url: "https://www.dekobo.es/en"
+    },
+    {
+        text: "Piscina Barcelona",
+        url: "https://www.piscinabarcelona.es/"
+    },
+    {
+        text: "Disegna",
+        url: "https://disegna.es/"
+    },
+    {
+        text: "Dekobo's LinkedIn post from the expo",
+        url: "https://www.linkedin.com/posts/dekobo-spain-s-l-_dekobospain-poolcovers-cubiertasparapiscinas-activity-7396152330724913152-RVw2?utm_source=share&utm_medium=member_desktop&rcm=ACoAACbR7_gBzMLmtin7QCuBJyI2SQoTQ1mzwzU"
+    },
+        ],
     },
 
 ];
