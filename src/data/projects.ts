@@ -41,7 +41,7 @@ export const projects: Project[] = [
     {
         text: "Digitalization of automated valves",
         url: "https://valve-world-americas.com/basf-digitalization-of-automated-valves-is-progressing/"
-    },
+    }
         ],
     },
 
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     {
         text: "Protolabs",
         url: "https://www.protolabs.com/"
-    },
+    }
         ],
     },
 
@@ -135,7 +135,7 @@ export const projects: Project[] = [
     {
         text: "Geomagic Software",
         url: "https://hexagon.com/company/divisions/manufacturing-intelligence/geomagic"
-    },
+    }
         ],
     },
 
@@ -165,7 +165,33 @@ export const projects: Project[] = [
     {
         text: "Dekobo's LinkedIn post from the expo",
         url: "https://www.linkedin.com/posts/dekobo-spain-s-l-_dekobospain-poolcovers-cubiertasparapiscinas-activity-7396152330724913152-RVw2?utm_source=share&utm_medium=member_desktop&rcm=ACoAACbR7_gBzMLmtin7QCuBJyI2SQoTQ1mzwzU"
+    }
+        ],
     },
+
+        {
+        slug: "rack-and-pinion-pneumatic-actuator",
+        title: "Rack & Pinion Pneumatic Actuator",
+        company: "Flowserve",
+        companyLogo: "/images/logos/flowserve.png",
+        companyLogoClass: "project-flowserve-logo",
+        featured: false,
+        heroImage: "/images/projects/rack-and-pinion-pneumatic-actuator/hero.jpg",
+        heroImageClass: "hero-rack-pinion",
+
+        references: [
+    {
+        text: "Flowserve",
+        url: "https://www.flowserve.com/"
+    },
+    {
+        text: "Supernova Rack & Pinion Actuator",
+        url: "https://www.flowserve.com/products/products-catalog/actuators-instrumentation/fluid-power-actuators/pneumatic-actuators-rack-pinion/pneumatic-actuators-rack-pinion-automax-supernova/"
+    },
+    {
+        text: "Benefits of Design to Value",
+        url: "https://www.flowserve.com/sites/default/files/dam/documents/PUWP000123_EN_A4.pdf"
+    }
         ],
     },
 
@@ -178,17 +204,6 @@ export const projects: Project[] = [
         featured: false,
         heroImage: "/images/projects/trunnion-mounted-ball-valve/hero.jpg",
         heroImageClass: "hero-ball-valve",
-    },
-
-    {
-        slug: "rack-and-pinion-pneumatic-actuator",
-        title: "Rack & Pinion Pneumatic Actuator",
-        company: "Flowserve",
-        companyLogo: "/images/logos/flowserve.png",
-        companyLogoClass: "project-flowserve-logo",
-        featured: false,
-        heroImage: "/images/projects/rack-and-pinion-pneumatic-actuator/hero.jpg",
-        heroImageClass: "hero-rack-pinion",
     },
 
     {
