@@ -51,84 +51,99 @@ if (!project) {
 
 <section>
 
-    Coming soon
-
-    <!--
-
     <h3 class="company-section-title">
-        Project Overview
+        Overview
     </h3>
 
     <p>
-        Was the target exactly 20%?
-        What was the actuator family called?
-        Which competitor was benchmarked?
-        What tests were performed?
-        Was the prototype cast or machined?
-        Was the project officially cancelled or paused?
-        How many new sizes were proposed?
-        Did the redesign include patentable ideas? 
+        Shortly after joining Dekobo, I was assigned to resolve a critical reliability issue affecting
+        the newly introduced E-STAR retractable pool cover system. Several of the first installed
+        units experienced failures of the drive mechanism responsible for moving the
+        retractable structure, preventing the covers from operating reliably.
     </p>
 
     <p>
-        Placeholder.
+        My role was to investigate the root cause of the failures, develop a permanent
+        engineering solution that could be retrofitted to existing installations as well as
+        incorporated into future production, and update the mechanical design accordingly.
     </p>
-
-    -->
 
 </section>
 
 <section>
 
-    <!--
-
     <h3 class="company-section-title">
-        Engineering Process
+        Project Development
     </h3>
 
     <p>
-        Placeholder.
+        The E-STAR system used a Bosch drive motor coupled through a timing belt
+        transmission to drive the wheels supporting the retractable structure. Customers
+        reported that the covers failed to move and produced abnormal noises during
+        operation.
     </p>
 
     <p>
-        Placeholder.
+        I began by reviewing the existing CAD models and identified that the transmission
+        design did not include any mechanism for adjusting or maintaining timing belt tension.
+        During field inspections, technicians confirmed that the timing belts had suffered severe
+        tooth wear and damage, consistent with insufficient belt tension under operating load.
     </p>
 
     <p>
-        Placeholder.
+        Further investigation showed that the original prototype had been tested without the
+        pool cover slats installed. While the unloaded transmission operated satisfactorily
+        during factory testing, the additional load of the complete assembly exceeded the
+        capability of the untensioned belt drive.
+    </p>
+
+        <h4>Transmission Redesign</h4>
+
+    <p>
+        To permanently resolve the issue, I redesigned the transmission assembly by
+        incorporating an adjustable timing belt tensioner. The solution maintained the required
+        belt tension while remaining compatible with both new production units and already
+        installed pool covers.
     </p>
 
     <p>
-        Placeholder.
+        One of the main engineering challenges was the limited installation space, particularly
+        on the Ibiza E-STAR model, where the transmission compartment offered very little
+        room for additional components. The redesigned assembly therefore had to remain
+        compact while allowing straightforward adjustment and maintenance.
     </p>
 
-    -->
+        <h4>Production Improvements</h4>
+
+    <p>
+        In addition to the transmission redesign, I designed a custom protective cover for the
+        Bosch drive motor, which was manufactured in-house using 3D printing.
+    </p>
+
+    <p>
+        Following implementation, the redesigned transmission successfully resolved the
+        reliability issues and was adopted as the standard solution for future E-STAR production
+        while also providing a retrofit solution for previously installed systems.
+    </p>
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Outcome
     </h3>
 
     <p>
-        Placeholder.
+        The project demonstrated the importance of designing for real operating conditions
+        and validating mechanical systems under representative loads. By identifying the
+        root cause of the field failures and developing a retrofit-compatible solution, the
+        reliability of the E-STAR transmission system was successfully restored.
     </p>
-
-    <p>
-        Placeholder.
-    </p>
-
-    -->
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Gallery
@@ -137,31 +152,57 @@ if (!project) {
     <ProjectGallery
         images={[
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-1.jpg",
-                alt: "Final CAD assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/retractable-pool-cover/gallery-1.jpg",
+                alt: "CAD model of initial transmission design",
+                caption: "Initial design"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-2.jpg",
-                alt: "Prototype assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/retractable-pool-cover/gallery-2.jpg",
+                alt: "CAD model of updated transmission design",
+                caption: "Updated design"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-3.jpg",
-                alt: "Internal pneumatic passages",
-                caption: "Final CAD assembly"
+                src: "/images/projects/retractable-pool-cover/gallery-3.jpg",
+                alt: "Transmission of retractable pool cover",
+                caption: "Updated design installed"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-4.jpg",
-                alt: "Completed Integrated Pneumatic Module",
-                caption: "Final CAD assembly"
+                src: "/images/projects/retractable-pool-cover/gallery-4.jpg",
+                alt: "CAD assembly of Milano E-STAR pool cover",
+                caption: "CAD assembly of Milano E-STAR pool cover"
             }
         ]}
     />
 
-    -->
+</section>
+
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
 
 </section>
+
+)}
 
 </div>
 

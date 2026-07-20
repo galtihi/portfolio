@@ -15,35 +15,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-    {
-        slug: "integrated-pneumatic-module",
-        title: "Integrated Pneumatic Module",
-        company: "Flowserve",
-        companyLogo: "/images/logos/flowserve.png",
-        companyLogoClass: "project-flowserve-logo",
-        featured: true,
-        heroImage: "/images/projects/integrated-pneumatic-module/hero.jpg",
-        heroImageClass: "hero-ipm",
-
-                references: [
-    {
-        text: "Flowserve",
-        url: "https://www.flowserve.com/"
-    },
-    {
-        text: "BASF",
-        url: "https://www.basf.com/global/en"
-    },
-    {
-        text: "BASF's IPM: Simplifying automated valves",
-        url: "https://valve-world.net/wp-content/uploads/sites/21/2022/04/BASF-IPM-simplifying-automated-valves.pdf"
-    },
-    {
-        text: "Digitalization of automated valves",
-        url: "https://valve-world-americas.com/basf-digitalization-of-automated-valves-is-progressing/"
-    }
-        ],
-    },
 
     {
         slug: "ultrasonic-welding",
@@ -76,35 +47,132 @@ export const projects: Project[] = [
     },
 
     {
-        slug: "scan-and-go-self-checkout-machine",
-        title: "Scan & Go Self-Checkout Machine",
-        company: "Matic",
-        companyLogo: "/images/logos/matic.png",
-        companyLogoClass: "project-matic-logo",
-        featured: true,
-        heroImage: "/images/projects/scan-and-go-self-checkout-machine/hero.jpg",
-        heroImageClass: "hero-scan-go",
+        slug: "retractable-pool-cover",
+        title: "Retractable Pool Cover",
+        company: "Dekobo",
+        companyLogo: "/images/logos/dekobo.png",
+        companyLogoClass: "project-dekobo-logo",
+        featured: false,
+        heroImage: "/images/projects/retractable-pool-cover/hero.jpg",
+        heroImageClass: "hero-pool-cover",
+
+    references: [
+    {
+        text: "Dekobo",
+        url: "https://www.dekobo.es/en"
+    },
+    {
+        text: "Model E-STAR",
+        url: "https://www.dekobo.es/en/models/e-star"
+    },
+    {
+        text: "E-STAR instagram video 1",
+        url: "https://www.instagram.com/reel/DMQSMmsiZhR/?ighs=MXQwd2F6aHBkZ2tzNQ=="
+    },
+    {
+        text: "E-STAR instagram video 2",
+        url: "https://www.instagram.com/reel/DFP5HZbKnMV/?ighs=MWZjMTZsbGk3Nnplag=="
+    },
+    {
+        text: "E-STAR exhibition video",
+        url: "https://www.youtube.com/watch?v=peufGjR_mFI"
+    }
+        ],
+    },
+
+    {
+        slug: "exhibition-pool",
+        title: "Exhibition Pool",
+        company: "Dekobo",
+        companyLogo: "/images/logos/dekobo.png",
+        companyLogoClass: "project-dekobo-logo",
+        featured: false,
+        heroImage: "/images/projects/exhibition-pool/hero.jpg",
+        heroImageClass: "hero-exhibition-pool",
 
         references: [
     {
-        text: "Matic",
-        url: "https://matic.hu/"
+        text: "Dekobo",
+        url: "https://www.dekobo.es/en"
     },
     {
-        text: "Bizerba Supersmart S3",
-        url: "https://www.bizerba.com/int/en/products/supersmart-s3"
+        text: "Piscina Barcelona",
+        url: "https://www.piscinabarcelona.es/"
     },
     {
-        text: "Bizerba Supersmart S3 - Promotional video 1",
-        url: "https://www.youtube.com/watch?v=frMWBfgVNb8"
+        text: "Disegna",
+        url: "https://disegna.es/"
     },
     {
-        text: "Bizerba Supersmart S3 - Promotional video 2",
-        url: "https://www.youtube.com/watch?v=1VREDGhUMtY"
+        text: "Dekobo's LinkedIn post from the expo",
+        url: "https://www.linkedin.com/posts/dekobo-spain-s-l-_dekobospain-poolcovers-cubiertasparapiscinas-activity-7396152330724913152-RVw2?utm_source=share&utm_medium=member_desktop&rcm=ACoAACbR7_gBzMLmtin7QCuBJyI2SQoTQ1mzwzU"
+    }
+        ],
+    },
+
+    {
+        slug: "tube-laser-cutting-machine",
+        title: "Tube Laser Cutting Machine",
+        company: "Dekobo",
+        companyLogo: "/images/logos/dekobo.png",
+        companyLogoClass: "project-dekobo-logo",
+        featured: false,
+        heroImage: "/images/projects/tube-laser-cutting-machine/hero.jpg",
+        heroImageClass: "hero-tube-laser",
+    },
+
+    {
+        slug: "rack-and-pinion-pneumatic-actuator",
+        title: "Rack & Pinion Pneumatic Actuator",
+        company: "Flowserve",
+        companyLogo: "/images/logos/flowserve.png",
+        companyLogoClass: "project-flowserve-logo",
+        featured: false,
+        heroImage: "/images/projects/rack-and-pinion-pneumatic-actuator/hero.jpg",
+        heroImageClass: "hero-rack-pinion",
+
+        references: [
+    {
+        text: "Flowserve",
+        url: "https://www.flowserve.com/"
     },
     {
-        text: "Bizerba Supersmart S3 - Demonstration",
-        url: "https://www.youtube.com/watch?v=uTpmb0ECRpM"
+        text: "Supernova Rack & Pinion Actuator",
+        url: "https://www.flowserve.com/products/products-catalog/actuators-instrumentation/fluid-power-actuators/pneumatic-actuators-rack-pinion/pneumatic-actuators-rack-pinion-automax-supernova/"
+    },
+    {
+        text: "Benefits of Design to Value",
+        url: "https://www.flowserve.com/sites/default/files/dam/documents/PUWP000123_EN_A4.pdf"
+    }
+        ],
+    },
+
+    {
+        slug: "integrated-pneumatic-module",
+        title: "Integrated Pneumatic Module",
+        company: "Flowserve",
+        companyLogo: "/images/logos/flowserve.png",
+        companyLogoClass: "project-flowserve-logo",
+        featured: true,
+        heroImage: "/images/projects/integrated-pneumatic-module/hero.jpg",
+        heroImageClass: "hero-ipm",
+
+                references: [
+    {
+        text: "Flowserve",
+        url: "https://www.flowserve.com/"
+    },
+    {
+        text: "BASF",
+        url: "https://www.basf.com/global/en"
+    },
+    {
+        text: "BASF's IPM: Simplifying automated valves",
+        url: "https://valve-world.net/wp-content/uploads/sites/21/2022/04/BASF-IPM-simplifying-automated-valves.pdf"
+    },
+    {
+        text: "Digitalization of automated valves",
+        url: "https://valve-world-americas.com/basf-digitalization-of-automated-valves-is-progressing/"
     }
         ],
     },
@@ -140,62 +208,6 @@ export const projects: Project[] = [
     },
 
     {
-        slug: "exhibition-pool",
-        title: "Exhibition Pool",
-        company: "Dekobo",
-        companyLogo: "/images/logos/dekobo.png",
-        companyLogoClass: "project-dekobo-logo",
-        featured: false,
-        heroImage: "/images/projects/exhibition-pool/hero.jpg",
-        heroImageClass: "hero-exhibition-pool",
-
-        references: [
-    {
-        text: "Dekobo",
-        url: "https://www.dekobo.es/en"
-    },
-    {
-        text: "Piscina Barcelona",
-        url: "https://www.piscinabarcelona.es/"
-    },
-    {
-        text: "Disegna",
-        url: "https://disegna.es/"
-    },
-    {
-        text: "Dekobo's LinkedIn post from the expo",
-        url: "https://www.linkedin.com/posts/dekobo-spain-s-l-_dekobospain-poolcovers-cubiertasparapiscinas-activity-7396152330724913152-RVw2?utm_source=share&utm_medium=member_desktop&rcm=ACoAACbR7_gBzMLmtin7QCuBJyI2SQoTQ1mzwzU"
-    }
-        ],
-    },
-
-        {
-        slug: "rack-and-pinion-pneumatic-actuator",
-        title: "Rack & Pinion Pneumatic Actuator",
-        company: "Flowserve",
-        companyLogo: "/images/logos/flowserve.png",
-        companyLogoClass: "project-flowserve-logo",
-        featured: false,
-        heroImage: "/images/projects/rack-and-pinion-pneumatic-actuator/hero.jpg",
-        heroImageClass: "hero-rack-pinion",
-
-        references: [
-    {
-        text: "Flowserve",
-        url: "https://www.flowserve.com/"
-    },
-    {
-        text: "Supernova Rack & Pinion Actuator",
-        url: "https://www.flowserve.com/products/products-catalog/actuators-instrumentation/fluid-power-actuators/pneumatic-actuators-rack-pinion/pneumatic-actuators-rack-pinion-automax-supernova/"
-    },
-    {
-        text: "Benefits of Design to Value",
-        url: "https://www.flowserve.com/sites/default/files/dam/documents/PUWP000123_EN_A4.pdf"
-    }
-        ],
-    },
-
-    {
         slug: "trunnion-mounted-ball-valve",
         title: "Trunnion Mounted Ball Valve",
         company: "Flowserve",
@@ -218,25 +230,37 @@ export const projects: Project[] = [
     },
 
     {
-        slug: "tube-laser-cutting-machine",
-        title: "Tube Laser Cutting Machine",
-        company: "Dekobo",
-        companyLogo: "/images/logos/dekobo.png",
-        companyLogoClass: "project-dekobo-logo",
-        featured: false,
-        heroImage: "/images/projects/tube-laser-cutting-machine/hero.jpg",
-        heroImageClass: "hero-tube-laser",
-    },
+        slug: "scan-and-go-self-checkout-machine",
+        title: "Scan & Go Self-Checkout Machine",
+        company: "Matic",
+        companyLogo: "/images/logos/matic.png",
+        companyLogoClass: "project-matic-logo",
+        featured: true,
+        heroImage: "/images/projects/scan-and-go-self-checkout-machine/hero.jpg",
+        heroImageClass: "hero-scan-go",
 
+        references: [
     {
-        slug: "retractable-pool-cover",
-        title: "Retractable Pool Cover",
-        company: "Dekobo",
-        companyLogo: "/images/logos/dekobo.png",
-        companyLogoClass: "project-dekobo-logo",
-        featured: false,
-        heroImage: "/images/projects/retractable-pool-cover/hero.jpg",
-        heroImageClass: "hero-pool-cover",
+        text: "Matic",
+        url: "https://matic.hu/"
+    },
+    {
+        text: "Bizerba Supersmart S3",
+        url: "https://www.bizerba.com/int/en/products/supersmart-s3"
+    },
+    {
+        text: "Bizerba Supersmart S3 - Promotional video 1",
+        url: "https://www.youtube.com/watch?v=frMWBfgVNb8"
+    },
+    {
+        text: "Bizerba Supersmart S3 - Promotional video 2",
+        url: "https://www.youtube.com/watch?v=1VREDGhUMtY"
+    },
+    {
+        text: "Bizerba Supersmart S3 - Demonstration",
+        url: "https://www.youtube.com/watch?v=uTpmb0ECRpM"
+    }
+        ],
     },
 
 ];
