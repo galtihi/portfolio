@@ -112,13 +112,24 @@ export const projects: Project[] = [
 
     {
         slug: "tube-laser-cutting-machine",
-        title: "Tube Laser Cutting Machine",
+        title: "Implementation of Tube Laser Cutting",
         company: "Dekobo",
         companyLogo: "/images/logos/dekobo.png",
         companyLogoClass: "project-dekobo-logo",
         featured: false,
         heroImage: "/images/projects/tube-laser-cutting-machine/hero.jpg",
         heroImageClass: "hero-tube-laser",
+
+        references: [
+    {
+        text: "Dekobo",
+        url: "https://www.dekobo.es/en"
+    },
+    {
+        text: "Bodor Laser",
+        url: "https://www.bodor.com/en/"
+    }
+        ],
     },
 
     {
