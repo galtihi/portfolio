@@ -138,7 +138,7 @@ export const projects: Project[] = [
         company: "Flowserve",
         companyLogo: "/images/logos/flowserve.png",
         companyLogoClass: "project-flowserve-logo",
-        featured: false,
+        featured: true,
         heroImage: "/images/projects/rack-and-pinion-pneumatic-actuator/hero.jpg",
         heroImageClass: "hero-rack-pinion",
 
@@ -164,7 +164,7 @@ export const projects: Project[] = [
         company: "Flowserve",
         companyLogo: "/images/logos/flowserve.png",
         companyLogoClass: "project-flowserve-logo",
-        featured: true,
+        featured: false,
         heroImage: "/images/projects/integrated-pneumatic-module/hero.jpg",
         heroImageClass: "hero-ipm",
 
@@ -224,7 +224,7 @@ export const projects: Project[] = [
         company: "Flowserve",
         companyLogo: "/images/logos/flowserve.png",
         companyLogoClass: "project-flowserve-logo",
-        featured: false,
+        featured: true,
         heroImage: "/images/projects/trunnion-mounted-ball-valve/hero.jpg",
         heroImageClass: "hero-ball-valve",
 
@@ -257,7 +257,7 @@ export const projects: Project[] = [
         company: "Matic",
         companyLogo: "/images/logos/matic.png",
         companyLogoClass: "project-matic-logo",
-        featured: true,
+        featured: false,
         heroImage: "/images/projects/scan-and-go-self-checkout-machine/hero.jpg",
         heroImageClass: "hero-scan-go",
 
