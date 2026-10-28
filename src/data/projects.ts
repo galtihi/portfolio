@@ -227,6 +227,17 @@ export const projects: Project[] = [
         featured: false,
         heroImage: "/images/projects/trunnion-mounted-ball-valve/hero.jpg",
         heroImageClass: "hero-ball-valve",
+
+        references: [
+    {
+        text: "Flowserve",
+        url: "https://www.flowserve.com/"
+    },
+    {
+        text: "FK76M Trunnion Mounted Ball Valve",
+        url: "https://www.flowserve.com/products/products-catalog/valves/ball-valves/trunnion-mounted-ball-valves/trunnion-mounted-ball-valves-fk76m/"
+    }
+        ],
     },
 
     {

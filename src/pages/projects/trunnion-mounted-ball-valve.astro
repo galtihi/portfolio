@@ -51,84 +51,107 @@ if (!project) {
 
 <section>
 
-    Coming soon
-
-    <!--
-
     <h3 class="company-section-title">
-        Project Overview
+        Overview
     </h3>
 
     <p>
-        Was the target exactly 20%?
-        What was the actuator family called?
-        Which competitor was benchmarked?
-        What tests were performed?
-        Was the prototype cast or machined?
-        Was the project officially cancelled or paused?
-        How many new sizes were proposed?
-        Did the redesign include patentable ideas? 
+        The project was initiated in response to customer feedback that the weight of one of our trunnion-
+        mounted ball valve product lines was placing excessive loads on customer pipelines. The objective was
+        to reduce the valve weight by 20% while maintaining compliance with the applicable design standards
+        and requirements.
     </p>
 
     <p>
-        Placeholder.
+        I joined the project when the engineering work began, supporting the Design to Value team with the
+        mechanical design activities. Working as part of a three-person engineering team, I was responsible
+        for redesigning the DN 80 and DN 100 valve bodies across different pressure ratings. The team 
+        ultimately achieved an average weight reduction of approximately 28% by transitioning from forged 
+        to cast valve bodies, while retaining the existing internal components.
     </p>
-
-    -->
 
 </section>
 
 <section>
 
-    <!--
-
     <h3 class="company-section-title">
-        Engineering Process
+        Project Development
     </h3>
 
     <p>
-        Placeholder.
+        The redesign focused exclusively on the valve bodies. All internal components, including the valve 
+        trim, remained unchanged. The engineering work was divided among three Design to Value team 
+        members, with each responsible for a selection of valve sizes. The challenge was to adapt the existing 
+        forged body designs for casting while maintaining the applicable requirements for the DIN valve range.
+    </p>
+
+        <h4>Valve Body Redesign</h4>
+
+    <p>
+        The redesign required developing a new external geometry for the valve bodies while preserving the
+        existing internal geometry and functional interfaces. This provided considerable design freedom to
+        rethink the external shape and adapt it to the requirements of casting, rather than simply modifying
+        the original forged design.
     </p>
 
     <p>
-        Placeholder.
+        The manufacturing approach varied depending on valve size: investment casting was used for smaller
+        bodies, while larger bodies were designed for sand casting.
     </p>
 
     <p>
-        Placeholder.
+        I developed the DN 80 and DN 100 variants across different pressure ratings, creating the 3D CAD
+        models and corresponding casting and manufacturing drawings. Throughout development, I
+        iteratively evaluated the designs using the team's engineering calculation spreadsheet, with particular 
+        attention to wall thicknesses and compliance with applicable design standards.
     </p>
 
     <p>
-        Placeholder.
+        My designs also served as a reference for the development of nearby valve sizes.
+    </p>    
+
+        <h4>Engineering Documentation and Design Review</h4>
+
+    <p>
+        The project required extensive engineering documentation, including CAD models and casting and
+        manufacturing drawings for the different size and pressure-rating combinations. We uploaded our 
+        deliverables to SAP, where they were submitted for review and approval by the subject matter expert 
+        at the manufacturing site in Germany.
     </p>
 
-    -->
+    <p>
+        Following completion of the engineering work, the project team travelled to Ettlingen, Germany, to 
+        present the results and facilitate a design review with the stakeholders involved in the project.
+    </p>
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Outcome
     </h3>
 
     <p>
-        Placeholder.
+        The project achieved an average valve weight reduction of approximately 28%, exceeding the original
+        20% target. Its scope also expanded considerably beyond the initial project charter, growing from 24
+        DIN valves to a delivery covering 33 DIN and 24 ASME valves.
     </p>
 
     <p>
-        Placeholder.
+        The broader project delivery included 392 engineering drawings, 172 released calculations and 1,164
+        SAP part codes, alongside additional engineering activities.
     </p>
 
-    -->
+    <p>
+        The team received a Celebrate Award in recognition of its contribution. The award highlighted the
+        team's ability to deliver substantially more than originally expected, on time and with high-quality 
+        engineering work.
+    </p>
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Gallery
@@ -137,31 +160,68 @@ if (!project) {
     <ProjectGallery
         images={[
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-1.jpg",
-                alt: "Final CAD assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/trunnion-mounted-ball-valve/gallery-1.jpg",
+                alt: "Visual comparison of forged and casted valve bodies.",
+                caption: "Casted (left) vs. forged (right) design"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-2.jpg",
-                alt: "Prototype assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/trunnion-mounted-ball-valve/gallery-2.jpg",
+                alt: "Section of a manufacturing drawing.",
+                caption: "Manufacturing drawing section"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-3.jpg",
-                alt: "Internal pneumatic passages",
-                caption: "Final CAD assembly"
+                src: "/images/projects/trunnion-mounted-ball-valve/gallery-3.jpg",
+                alt: "First samples of casted valve bodies in wooden crate.",
+                caption: "First samples"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-4.jpg",
-                alt: "Completed Integrated Pneumatic Module",
-                caption: "Final CAD assembly"
+                src: "/images/projects/trunnion-mounted-ball-valve/gallery-4.jpg",
+                alt: "Engineering team member presenting the trunnion-mounted ball valve redesign during a project review at Flowserve's Ettlingen facility in Germany.",
+                caption: "Project design review"
+            },
+            {
+                src: "/images/projects/trunnion-mounted-ball-valve/gallery-5.jpg",
+                alt: "Engineering team member presenting the trunnion-mounted ball valve redesign during a project review at Flowserve's Ettlingen facility in Germany.",
+                caption: "Project design review"
+            },
+            {
+                src: "/images/projects/trunnion-mounted-ball-valve/gallery-6.jpg",
+                alt: "Image of the written award.",
+                caption: "Award"
             }
         ]}
     />
 
-    -->
+</section>
+
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
 
 </section>
+
+)}
+
 
 </div>
 
