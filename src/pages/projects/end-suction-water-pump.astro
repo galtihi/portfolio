@@ -51,84 +51,109 @@ if (!project) {
 
 <section>
 
-    Coming soon
-
-    <!--
-
     <h3 class="company-section-title">
-        Project Overview
+        Overview
     </h3>
 
     <p>
-        Was the target exactly 20%?
-        What was the actuator family called?
-        Which competitor was benchmarked?
-        What tests were performed?
-        Was the prototype cast or machined?
-        Was the project officially cancelled or paused?
-        How many new sizes were proposed?
-        Did the redesign include patentable ideas? 
+        The project focused on the SIHI ZLND Overhung Industrial Process
+        Pump and was initiated as a follow-up to a product portfolio
+        rationalisation initiative. Its objective was to further reduce 
+        manufacturing cost and complexity by standardising components across 
+        the remaining pump product lines and increasing interchangeability
+        between different configurations.
     </p>
 
     <p>
-        Placeholder.
+        I joined the project during the redesign phase to support the 
+        engineering team with mechanical design and CAD development. My 
+        responsibility was to redesign the driven-end assembly of the long-
+        coupled pump configuration, separating the originally integrated 
+        bearing housing and cover into two independent components.
     </p>
-
-    -->
 
 </section>
 
 <section>
 
-    <!--
-
     <h3 class="company-section-title">
-        Engineering Process
+        Project Development
     </h3>
 
     <p>
-        Placeholder.
+        The project aimed to establish a common volute casing design for close-coupled
+        and long-coupled pump configurations. While both shared the
+        same pump casing, their mechanical interfaces differed.
     </p>
 
     <p>
-        Placeholder.
+        In close-coupled configurations, the casing was connected directly to
+        the motor through an adapter, with the impeller mounted on the motor 
+        shaft or a shaft extension. In long-coupled configurations, the casing
+        connected to a separate bearing housing through a cover. The bearing
+        housing supported the pump shaft, which carried the impeller and
+        connected to the motor shaft.
+    </p>
+
+        <h4>Driven-End Redesign</h4>
+
+    <p>
+        For the long-coupled configuration, I redesigned the original integrated
+        bearing housing and cover as separate components. The new
+        architecture was based on two standard bearing housing sizes, with 
+        interchangeable covers providing the connection to different pump
+        casings.
     </p>
 
     <p>
-        Placeholder.
+        I developed the new components in Solidworks, using the original design 
+        as a starting point where applicable. This involved creating a new 
+        mechanical interface between the bearing housing and cover, as well as 
+        incorporating additional design features. These included a machined 
+        surface on top of the bearing housing for a standardised nameplate.
     </p>
 
     <p>
-        Placeholder.
+        I also introduced a cast Flowserve logo on the sides of the bearing
+        housing as a design detail. Although not part of the original 
+        requirements, the project team welcomed the addition and retained it in
+        the final design.
     </p>
 
-    -->
+        <h4>International Collaboration</h4>
+
+    <p>
+        The project brought together engineers from several Flowserve
+        locations, including Spain, Germany and India, who were responsible for
+        different aspects of the product development. I coordinated with the 
+        other engineers throughout the redesign phase to ensure that the
+        components and interfaces developed in parallel remained aligned.
+    </p>
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Outcome
     </h3>
 
     <p>
-        Placeholder.
+        The redesigned components contributed to a more standardised pump
+        product range, reducing the number of unique parts and overall product 
+        complexity. The resulting component commonality across different 
+        pump configurations also contributed to manufacturing cost savings.
     </p>
 
     <p>
-        Placeholder.
+        My contribution focused on the mechanical design and CAD
+        development of the long-coupled driven-end assembly, supporting the
+        wider team's modularisation initiative.
     </p>
-
-    -->
 
 </section>
 
 <section>
-
-    <!--
 
     <h3 class="company-section-title">
         Gallery
@@ -137,31 +162,64 @@ if (!project) {
     <ProjectGallery
         images={[
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-1.jpg",
-                alt: "Final CAD assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/end-suction-water-pump/gallery-1.jpg",
+                alt: "SIHI ZLND overhung industrial process pump shown in blue.",
+                caption: "Original design"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-2.jpg",
-                alt: "Prototype assembly",
-                caption: "Final CAD assembly"
+                src: "/images/projects/end-suction-water-pump/gallery-2.jpg",
+                alt: "SIHI ZLND pump assembly.",
+                caption: "Redesigned pump"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-3.jpg",
-                alt: "Internal pneumatic passages",
-                caption: "Final CAD assembly"
+                src: "/images/projects/end-suction-water-pump/gallery-3.jpg",
+                alt: "Cross-sectional view of SIHI ZLND pump assembly showing the internal components, shaft and bearing arrangement.",
+                caption: "Redesigned pump section-view"
             },
             {
-                src: "/images/projects/integrated-pneumatic-module/gallery-4.jpg",
-                alt: "Completed Integrated Pneumatic Module",
-                caption: "Final CAD assembly"
+                src: "/images/projects/end-suction-water-pump/gallery-4.jpg",
+                alt: "Prototype assembly during engineering development.",
+                caption: "Prototype"
+            },
+            {
+                src: "/images/projects/end-suction-water-pump/gallery-5.jpg",
+                alt: "Close-up of the redesigned protoype bearing housing.",
+                caption: "Prototype"
             }
         ]}
     />
 
-    -->
+</section>
+
+
+{project.references && (
+
+<section>
+
+    <h3 class="company-section-title">
+        References
+    </h3>
+
+    <div class="project-references">
+
+        {project.references.map(reference => (
+
+            <a
+                href={reference.url}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                {reference.text} →
+            </a>
+
+        ))}
+
+    </div>
 
 </section>
+
+)}
+
 
 </div>
 

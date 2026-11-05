@@ -249,6 +249,25 @@ export const projects: Project[] = [
         featured: false,
         heroImage: "/images/projects/end-suction-water-pump/hero.jpg",
         heroImageClass: "hero-end-suction",
+
+        references: [
+    {
+        text: "Flowserve",
+        url: "https://www.flowserve.com/"
+    },
+    {
+        text: "SIHI® ZLND-ZLKD-ZLIC Industrial Process Pump",
+        url: "https://www.flowserve.com/products/products-catalog/pumps/overhung-pumps/industrial-process-pumps/sihi-zlnd-zlkd-zlic-industrial-process-pump/"
+    },
+    {
+        text: "SIHI ® ZLND Overhung Industrial Process Pump Fulfills the Standard for the Future",
+        url: "https://www.flowserve.com/sites/default/files/dam/nnetuvaqyb/pufly003032_en_ltr.pdf?t.download=true"
+    },
+    {
+        text: "SIHI® ZLKD Close Coupled Industrial Process Pump Fulfills the Standard for the Futuree",
+        url: "https://www.flowserve.com/sites/default/files/dam/7z6vzfdkwg/pufly003256_en_ltr.pdf?t.download=true"
+    }
+        ],
     },
 
     {
